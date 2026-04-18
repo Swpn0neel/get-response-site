@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Get Response — A Terminal-Based AI Powerhouse
 
-## Getting Started
+![Get Response Hero](public/hero.png)
 
-First, run the development server:
+Experience technical rigor and editorial sophistication. **Get Response** is a high-precision AI tool designed for developer workflows, treating the terminal as an architectural layer for direct, context-aware interaction with your codebase.
+
+## 🚀 Key Features
+
+- **Gemini Integration**: Near-instant responses powered by Google's Gemini Pro, engineered for low-latency conversational interactions.
+- **Context-Aware**: Understands your environment. Interact naturally with files and folders in your current directory without manual context switching.
+- **Terminal Automation**: Describe tasks in plain English (e.g., "Refactor this script") and get exact shell commands or code changes.
+- **Visual Intelligence**: Generate Mermaid.js diagrams mapping out class structures or data flows directly from your terminal output.
+- **Rich Design System**: A monochrome, high-contrast aesthetic that brings clarity to high-precision developer tools.
+
+## 📦 Installation
+
+Install globally via NPM:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm i get-response -g
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Analyze your current project structure:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npx get-response -d ./src "Explain this directory structure"
+```
 
-## Learn More
+Refactor code on the fly:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx get-response "Refactor this python script for better performance"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚡ Get Response Lite
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Looking for something lighter? Meet `get-response-lite`.
 
-## Deploy on Vercel
+A streamlined, high-performance alternative designed for CI/CD pipelines or constrained environments.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **80% Smaller Footprint**: Minimal dependencies for maximum speed.
+- **Pure AI Engine**: Retains all conversational capabilities while omitting heavy features like OCR or PDF parsing.
+- **Fast Installation**: Installs in seconds.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install get-response-lite -g
+```
+
+## 🛠️ Development
+
+This is a [Next.js](https://nextjs.org) project.
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the landing page.
+
