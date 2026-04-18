@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import Link from "next/link";
 
 const commands = [
