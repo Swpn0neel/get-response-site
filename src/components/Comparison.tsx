@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CircleCheck, CircleX, Download, Terminal, Copy, Check, ArrowUpRight } from "lucide-react";
+import { CircleCheck, CircleX, Download, Copy, Check, ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
