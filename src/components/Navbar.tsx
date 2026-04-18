@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2 sm:gap-4 shrink-0">
           <ThemeToggle />
           <Button 
-            render={<Link href="https://www.npmjs.com/package/get-response" target="_blank" />} 
+            render={<Link href="https://www.npmjs.com/package/get-response" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
             className="bg-gradient-to-br from-primary to-[#2170e4] hover:brightness-110 transition-all font-medium text-xs sm:text-sm px-3 sm:px-4"
           >
