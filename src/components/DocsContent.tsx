@@ -54,6 +54,24 @@ const contextFlags = [
   { type: "Image (OCR)", flag: "-i", example: "What does this mean?", cmd: "-i ./screenshot.png", icon: <ImageIcon size={16} /> },
 ];
 
+const featuresData = [
+  { title: "Gemini Integration", desc: "Uses Google’s latest Flash model for ultra-fast, conversational AI responses." },
+  { title: "Contextual Awareness", desc: "Native support for files, directories, PDFs, and images (OCR) as model context." },
+  { title: "Terminal Automation", desc: "Safely generate and execute shell commands with AI assistance and user confirmation." },
+  { title: "Stack Exchange Research", desc: "Search and summarize Stack Overflow discussions directly within your workflow." },
+];
+
+const techStackData = [
+  "Google Gemini",
+  "Node.js Core",
+  "Tesseract OCR",
+  "Mermaid CLI",
+  "pdf-parse-fork",
+  "Chalk / Boxen",
+  "Axios",
+  "Nanospinner"
+];
+
 function CodeBlock({ code, label }: { code: string; label?: string }) {
   const [copied, setCopied] = useState(false);
 
@@ -127,12 +145,7 @@ export default function DocsContent() {
           <div className="h-1 w-20 bg-primary/20 rounded-full" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-            { title: "Gemini Integration", desc: "Uses Google’s latest Flash model for ultra-fast, conversational AI responses." },
-            { title: "Contextual Awareness", desc: "Native support for files, directories, PDFs, and images (OCR) as model context." },
-            { title: "Terminal Automation", desc: "Safely generate and execute shell commands with AI assistance and user confirmation." },
-            { title: "Stack Exchange Research", desc: "Search and summarize Stack Overflow discussions directly within your workflow." },
-          ].map((feature, i) => (
+          {featuresData.map((feature, i) => (
             <div key={i} className="p-6 rounded-2xl bg-surface border border-border hover:border-primary/30 transition-all group">
               <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
@@ -352,16 +365,7 @@ export default function DocsContent() {
           <h2 className="text-3xl font-bold tracking-tight">Tech Stack</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            "Google Gemini",
-            "Node.js Core",
-            "Tesseract OCR",
-            "Mermaid CLI",
-            "pdf-parse-fork",
-            "Chalk / Boxen",
-            "Axios", 
-            "Nanospinner"
-          ].map((tech) => (
+          {techStackData.map((tech) => (
             <div key={tech} className="p-4 rounded-xl border bg-surface flex items-center justify-center text-xs font-bold uppercase tracking-tight text-center">
               {tech}
             </div>
