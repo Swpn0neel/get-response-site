@@ -132,7 +132,7 @@ export default function Hero({ version = "v1.10.x" }: HeroProps) {
             transition={{ duration: 0.8 }}
             className="relative group"
           >
-            <div className="absolute -inset-4 bg-primary/5 rounded-[2rem] blur-3xl group-hover:bg-primary/10 transition-colors" />
+            <div className="absolute -inset-4 bg-primary/5 rounded-2xl blur-3xl group-hover:bg-primary/10 transition-colors" />
             
             <div className="relative bg-[#0b1219] rounded-2xl overflow-hidden shadow-2xl border border-white/5">
               {/* Header */}
@@ -219,7 +219,7 @@ export default function Hero({ version = "v1.10.x" }: HeroProps) {
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5 }}
-                          className="ml-8 p-4 rounded-xl bg-primary/5 border-l-2 border-primary space-y-2"
+                          className="ml-8 p-4 rounded-2xl bg-primary/5 border-l-2 border-primary space-y-2"
                         >
                           <p className="text-[#58a6ff] leading-relaxed">
                             <Typewriter text={cmd.text} speed={25} delay={500} />

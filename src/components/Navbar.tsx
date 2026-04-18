@@ -36,7 +36,7 @@ export default function Navbar() {
 
           {!isDocsPage && (
             <NavigationMenu className="hidden md:flex shrink-0">
-              <NavigationMenuList>
+              <NavigationMenuList className="gap-2">
                 <NavigationMenuItem>
                   <NavigationMenuLink render={<Link href="#features" />} className={navigationMenuTriggerStyle()}>
                     Features

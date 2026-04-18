@@ -83,7 +83,7 @@ export default function Comparison() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="p-5 rounded-xl bg-surface border border-border/50 shadow-sm flex items-center gap-3 font-mono text-sm group flex-1"
+                className="p-5 rounded-2xl bg-surface border border-border/50 shadow-sm flex items-center gap-3 font-mono text-sm group flex-1"
               >
                 <div className="flex items-center gap-3 flex-1 basis-0 min-w-0">
                   <span className="text-emerald-500 font-bold">$</span>
@@ -101,7 +101,7 @@ export default function Comparison() {
                 href="https://www.npmjs.com/package/get-response-lite"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 flex items-center justify-center bg-surface border border-border/50 rounded-xl transition-all text-muted-foreground hover:text-foreground shrink-0 group/link shadow-sm hover:shadow-md hover:bg-foreground/[0.02]"
+                className="w-16 flex items-center justify-center bg-surface border border-border/50 rounded-2xl transition-all text-muted-foreground hover:text-foreground shrink-0 group/link shadow-sm hover:shadow-md hover:bg-foreground/[0.02]"
                 title="visit the npm page"
               >
                 <ArrowUpRight size={22} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
@@ -115,7 +115,7 @@ export default function Comparison() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-surface rounded-[2.5rem] p-12 md:p-16 text-foreground shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] dark:shadow-primary/5 border border-border/50 relative"
+            className="bg-surface rounded-2xl p-12 md:p-16 text-foreground shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] dark:shadow-primary/5 border border-border/50 relative"
           >
             <h3 className="text-2xl font-bold mb-10 text-foreground">Lite vs Standard</h3>
             

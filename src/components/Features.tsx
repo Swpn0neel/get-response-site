@@ -80,9 +80,9 @@ export default function Features() {
               viewport={{ once: true }}
               className={`${feature.span}`}
             >
-              <Card className="h-full border-none bg-surface-container-lowest rounded-[1.5rem] shadow-sm hover:shadow-md transition-all duration-300">
+              <Card className="h-full border-none bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
                 <CardHeader className="pt-10 pl-10 pr-10">
-                  <div className="w-12 h-12 rounded-xl bg-[#0058be]/10 flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-[#0058be]/10 flex items-center justify-center mb-6">
                     {feature.icon}
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">{feature.title}</CardTitle>

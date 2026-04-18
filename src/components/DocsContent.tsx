@@ -71,25 +71,6 @@ const contextFlags = [
   { type: "PDF", flag: "-p", example: "Summarize this paper", cmd: "-p ./paper.pdf", icon: <FileText size={16} className="text-blue-500" /> },
   { type: "Image (OCR)", flag: "-i", example: "What does this mean?", cmd: "-i ./screenshot.png", icon: <ImageIcon size={16} /> },
 ];
-
-const featuresData = [
-  { title: "Gemini Integration", desc: "Uses Google’s latest Flash model for ultra-fast, conversational AI responses." },
-  { title: "Contextual Awareness", desc: "Native support for files, directories, PDFs, and images (OCR) as model context." },
-  { title: "Terminal Automation", desc: "Safely generate and execute shell commands with AI assistance and user confirmation." },
-  { title: "Stack Exchange Research", desc: "Search and summarize Stack Overflow discussions directly within your workflow." },
-];
-
-const techStackData = [
-  "Google Gemini",
-  "Node.js Core",
-  "Tesseract OCR",
-  "Mermaid CLI",
-  "pdf-parse-fork",
-  "Chalk / Boxen",
-  "Axios",
-  "Nanospinner"
-];
-
 function CodeBlock({ code, label }: { code: string; label?: string }) {
   const [copied, setCopied] = useState(false);
 
@@ -110,7 +91,7 @@ function CodeBlock({ code, label }: { code: string; label?: string }) {
           {label}
         </div>
       )}
-      <div className="bg-zinc-950 rounded-xl overflow-hidden border border-white/10 shadow-xl transition-all hover:border-white/20">
+      <div className="bg-zinc-950 rounded-2xl overflow-hidden border border-white/10 shadow-xl transition-all hover:border-white/20">
         <div className="bg-zinc-900 px-4 py-3 flex items-center justify-between border-b border-white/5">
           <div className="flex gap-1.5 font-mono text-[10px] text-zinc-500 uppercase tracking-tighter">
             terminal — bash
@@ -183,7 +164,7 @@ export default function DocsContent() {
             href="https://github.com/Swpn0neel/get-response" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 text-white text-sm font-medium hover:bg-black transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-zinc-900 text-white text-sm font-medium hover:bg-black transition-all"
           >
             <ExternalLink size={18} />
             View Repository
@@ -193,7 +174,7 @@ export default function DocsContent() {
         <div className="grid grid-cols-1 gap-4">
           {architectureData.map((item, i) => (
             <div key={i} className="flex items-start gap-6 p-6 rounded-2xl border bg-surface relative overflow-hidden group">
-              <div className="p-3 rounded-xl bg-primary/5 group-hover:bg-primary/10 transition-colors">
+              <div className="p-3 rounded-2xl bg-primary/5 group-hover:bg-primary/10 transition-colors">
                 {item.icon}
               </div>
               <div className="space-y-2 flex-1">
@@ -347,7 +328,7 @@ export default function DocsContent() {
               </p>
               <div className="space-y-3">
                 <div className="text-[10px] uppercase font-bold text-muted-foreground opacity-50 tracking-wider">Example Command</div>
-                <code className="block p-4 rounded-xl bg-background text-muted-foreground text-xs font-technical border border-border">
+                <code className="block p-4 rounded-2xl bg-background text-muted-foreground text-xs font-technical border border-border">
                   # "Find all large log files and move them to a backup folder" <br />
                   $ npx get-response -t "move all files larger than 10MB in /logs to /backup" 
                 </code>
@@ -369,7 +350,7 @@ export default function DocsContent() {
                 Perfect for architecture reviews, get-response can output valid Mermaid.js code to 
                 visualize systems, logic flows, or database schemas directly in your terminal.
               </p>
-              <code className="block p-4 rounded-xl bg-background text-xs text-primary font-technical border border-border">
+              <code className="block p-4 rounded-2xl bg-background text-xs text-primary font-technical border border-border">
                 $ npx get-response -m -d ./src
               </code>
             </div>
@@ -384,7 +365,7 @@ export default function DocsContent() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {techStackData.map((tech) => (
-            <div key={tech} className="p-4 rounded-xl border bg-surface flex items-center justify-center text-xs font-bold uppercase tracking-tight text-center">
+            <div key={tech} className="p-4 rounded-2xl border bg-surface flex items-center justify-center text-xs font-bold uppercase tracking-tight text-center">
               {tech}
             </div>
           ))}
@@ -401,12 +382,24 @@ export default function DocsContent() {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button variant="outline" size="lg" className="rounded-full gap-2 px-8">
-            <ExternalLink size={16} /> GitHub Issues
-          </Button>
-          <Button variant="outline" size="lg" className="rounded-full gap-2 px-8">
-            <ExternalLink size={16} /> Twitter / X
-          </Button>
+          <a 
+            href="https://github.com/Swpn0neel/get-response/issues" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" size="lg" className="rounded-full gap-2 px-8">
+              <ExternalLink size={16} /> GitHub Issues
+            </Button>
+          </a>
+          <a 
+            href="https://x.com/swapnoneel123" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" size="lg" className="rounded-full gap-2 px-8">
+              <ExternalLink size={16} /> Twitter / X
+            </Button>
+          </a>
         </div>
         <p className="text-[10px] font-technical uppercase tracking-[0.3em] font-bold text-muted-foreground pt-8">
           Created with ❤️ by Swapnoneel Saha &copy; {new Date().getFullYear()}
