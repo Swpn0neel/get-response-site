@@ -12,13 +12,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const features = [
   {
     title: "Gemini Integration",
-    description: "Experience near-instant responses powered by Google's Gemini 2.5 Flash model. Engineered for low latency, allowing conversational interactions directly from your prompt.",
+    description: "Experience near-instant responses powered by Google's Gemini. Engineered for low latency, allowing conversational interactions directly from your prompt.",
     icon: <Bot className="h-6 w-6 text-[#0058be]" />,
     span: "md:col-span-2",
     extra: (
-      <div className="mt-8 p-4 rounded-lg bg-surface-container border border-black/5 font-mono text-sm text-foreground/70">
+      <div className="mt-8 p-4 rounded-lg bg-surface border border-border/50 font-mono text-sm text-foreground/70">
         <span className="opacity-50 mr-2">{">"}</span>
-        get-response "Refactor this python script for better performance"
+        npx get-response "Refactor this python script for better performance"
       </div>
     )
   },
@@ -54,8 +54,8 @@ export default function Features() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold tracking-tight max-w-3xl"
           >
-            Built for High-Precision <br /> 
-            <span className="text-secondary opacity-60">Developer Workflows</span>
+            Built for High-Precision <br />
+            <span className="text-secondary opacity-90">Developer Workflows</span>
           </motion.h2>
 
           <motion.p
@@ -85,7 +85,7 @@ export default function Features() {
                   <div className="w-12 h-12 rounded-xl bg-[#0058be]/10 flex items-center justify-center mb-6">
                     {feature.icon}
                   </div>
-                  <CardTitle className="text-2xl font-bold text-black">{feature.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-foreground">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="pl-10 pb-10 pr-10">
                   <p className="text-muted-foreground text-lg leading-relaxed">

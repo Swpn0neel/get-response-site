@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CircleCheck, CircleX, Download, Terminal, Copy, Check } from "lucide-react";
+import { CircleCheck, CircleX, Download, Terminal, Copy, Check, ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const comparisonFeatures = [
   {
     icon: <CircleCheck className="h-5 w-5 text-green-500 shrink-0" />,
     title: "Core AI Engine",
-    description: "Full Gemini 2.5 Flash conversational capabilities",
+    description: "Full Google Gemini's conversational capabilities",
   },
   {
     icon: <CircleCheck className="h-5 w-5 text-green-500 shrink-0" />,
@@ -42,7 +43,7 @@ export default function Comparison() {
   };
 
   return (
-    <section id="comparison" className="py-48 bg-[#f9fafb] overflow-hidden relative border-t border-black/5 scroll-mt-16">
+    <section id="comparison" className="py-48 bg-background overflow-hidden relative scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           {/* Left Content */}
@@ -77,24 +78,35 @@ export default function Comparison() {
               </p>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="mt-4 p-5 rounded-xl bg-background border border-black/5 shadow-sm flex items-center gap-3 font-mono text-sm group w-full sm:w-fit"
-            >
-              <div className="flex items-center gap-3 flex-1 basis-0 min-w-0">
-                <span className="text-emerald-500 font-bold">$</span>
-                <span className="text-foreground font-medium truncate">npm install get-response-lite -g</span>
-              </div>
-              <button 
-                onClick={handleCopy}
-                className="p-2 hover:bg-black/5 rounded-lg transition-all text-muted-foreground hover:text-foreground shrink-0 ml-4 group/btn"
-                title="Copy to clipboard"
+            <div className="flex items-stretch gap-4 mt-4 w-full sm:w-fit">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="p-5 rounded-xl bg-surface border border-border/50 shadow-sm flex items-center gap-3 font-mono text-sm group flex-1"
               >
-                {copied ? <Check size={16} className="text-emerald-500 animate-in zoom-in-50" /> : <Copy size={16} className="group-hover/btn:scale-110 transition-transform" />}
-              </button>
-            </motion.div>
+                <div className="flex items-center gap-3 flex-1 basis-0 min-w-0">
+                  <span className="text-emerald-500 font-bold">$</span>
+                  <span className="text-foreground font-medium truncate">npm install get-response-lite -g</span>
+                </div>
+                <button 
+                  onClick={handleCopy}
+                  className="p-2 hover:bg-foreground/5 rounded-lg transition-all text-muted-foreground hover:text-foreground shrink-0 ml-4 group/btn"
+                  title="Copy to clipboard"
+                >
+                  {copied ? <Check size={16} className="text-emerald-500 animate-in zoom-in-50" /> : <Copy size={16} className="group-hover/btn:scale-110 transition-transform" />}
+                </button>
+              </motion.div>
+              <Link 
+                href="https://www.npmjs.com/package/get-response-lite"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-16 flex items-center justify-center bg-surface border border-border/50 rounded-xl transition-all text-muted-foreground hover:text-foreground shrink-0 group/link shadow-sm hover:shadow-md hover:bg-foreground/[0.02]"
+                title="visit the npm page"
+              >
+                <ArrowUpRight size={22} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
           </div>
 
           {/* Right Comparison Card */}
@@ -103,7 +115,7 @@ export default function Comparison() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[2.5rem] p-12 md:p-16 text-foreground shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] border border-black/5 relative"
+            className="bg-surface rounded-[2.5rem] p-12 md:p-16 text-foreground shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] dark:shadow-primary/5 border border-border/50 relative"
           >
             <h3 className="text-2xl font-bold mb-10 text-foreground">Lite vs Standard</h3>
             

@@ -84,7 +84,7 @@ export default function DocsSidebar({ version = "v1.10.x" }: SidebarProps) {
       </div>
       
       {!isCollapsed && (
-        <div className="p-6 border-t bg-surface-container-low/30">
+        <div className="py-6 pr-6">
           <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
             <p className="text-[10px] uppercase tracking-wider font-bold text-primary mb-1">
               Latest Version

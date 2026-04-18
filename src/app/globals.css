@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:is([data-theme='dark'] *));
 
 @theme inline {
   --color-background: var(--background);
@@ -58,59 +58,59 @@
 
 :root {
   --background: #f9f9fa;
-  --foreground: #1a1c1d;
+  --foreground: #020617;
   
-  --surface: #f9f9fa;
-  --surface-container: #eeeeef;
+  --surface: #ffffff;
+  --surface-container: #e2e8f0;
   --surface-container-low: #f3f3f4;
   --surface-container-lowest: #ffffff;
-  --surface-dim: #dadadb;
+  --surface-dim: #cbd5e1;
 
   --card: #ffffff;
-  --card-foreground: #1a1c1d;
+  --card-foreground: #020617;
   --popover: #ffffff;
-  --popover-foreground: #1a1c1d;
+  --popover-foreground: #020617;
   --primary: #0058be;
   --primary-foreground: #ffffff;
-  --secondary: #565e74;
+  --secondary: #6177A5;
   --secondary-foreground: #ffffff;
-  --muted: #f3f3f4;
-  --muted-foreground: #424754;
-  --accent: #eeeeef;
-  --accent-foreground: #1a1c1d;
-  --destructive: #ba1a1a;
-  --border: #c2c6d6;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #020617;
+  --destructive: #ef4444;
+  --border: #e2e8f0;
   --input: #ffffff;
-  --ring: #0058be;
-  --radius: 0.375rem;
+  --ring: #3B82F6;
+  --radius: 0.5rem;
 }
 
-.dark {
-  --background: #0b1c30;
+[data-theme='dark'] {
+  --background: #020617;
   --foreground: #f9f9fa;
   
-  --surface: #0b1c30;
+  --surface: #020617;
   --surface-container: #1e293b;
-  --surface-container-low: #0f172a;
+  --surface-container-low: #020617;
   --surface-container-lowest: #020617;
   --surface-dim: #000000;
 
-  --card: #0f172a;
+  --card: #020617;
   --card-foreground: #f9f9fa;
-  --popover: #0f172a;
+  --popover: #020617;
   --popover-foreground: #f9f9fa;
-  --primary: #0058be;
+  --primary: #3B82F6;
   --primary-foreground: #ffffff;
-  --secondary: #bec6e0;
-  --secondary-foreground: #131b2e;
+  --secondary: #6177A5;
+  --secondary-foreground: #ffffff;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
   --accent: #1e293b;
-  --accent-foreground: #f1f5f9;
+  --accent-foreground: #f9f9fa;
   --destructive: #ef4444;
-  --border: #334155;
-  --input: #0f172a;
-  --ring: #3b82f6;
+  --border: #1e293b;
+  --input: #020617;
+  --ring: #3B82F6;
 }
 
 @layer base {
@@ -118,9 +118,9 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-500 ease-in-out;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
   }
 }

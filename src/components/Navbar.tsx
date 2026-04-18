@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./Logo";
 
 export default function Navbar() {
@@ -56,7 +57,8 @@ export default function Navbar() {
           )}
         </div>
 
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+          <ThemeToggle />
           <Button 
             render={<Link href="https://www.npmjs.com/package/get-response" target="_blank" />} 
             nativeButton={false}
