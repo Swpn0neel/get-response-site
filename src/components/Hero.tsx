@@ -106,7 +106,7 @@ export default function Hero({ version = "v1.10.x" }: HeroProps) {
               className="flex flex-wrap gap-4"
             >
               <Button 
-                render={<Link href="https://www.npmjs.com/package/get-response" target="_blank" />} 
+                render={<Link href="https://www.npmjs.com/package/get-response" target="_blank" rel="noopener noreferrer" />}
                 nativeButton={false}
                 size="lg" 
                 className="h-14 px-8 text-lg bg-primary hover:brightness-110"
