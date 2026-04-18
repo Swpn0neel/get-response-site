@@ -20,6 +20,24 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+const featuresData = [
+  { title: "Gemini Integration", desc: "Uses Google’s latest Flash model for ultra-fast, conversational AI responses." },
+  { title: "Contextual Awareness", desc: "Native support for files, directories, PDFs, and images (OCR) as model context." },
+  { title: "Terminal Automation", desc: "Safely generate and execute shell commands with AI assistance and user confirmation." },
+  { title: "Stack Exchange Research", desc: "Search and summarize Stack Overflow discussions directly within your workflow." },
+];
+
+const techStackData = [
+  "Google Gemini",
+  "Node.js Core",
+  "Tesseract OCR",
+  "Mermaid CLI",
+  "pdf-parse-fork",
+  "Chalk / Boxen",
+  "Axios",
+  "Nanospinner"
+];
+
 const architectureData = [
   { 
     title: "Core Engine", 
