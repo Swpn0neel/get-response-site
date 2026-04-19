@@ -78,20 +78,20 @@ export default function Comparison() {
               </p>
             </div>
 
-            <div className="flex items-stretch gap-4 mt-4 w-full sm:w-fit">
+            <div className="flex items-stretch gap-2 sm:gap-4 mt-4 w-full sm:w-fit">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="p-5 rounded-2xl bg-surface border border-border/50 shadow-sm flex items-center gap-3 font-mono text-sm group flex-1"
+                className="p-3.5 sm:p-5 rounded-2xl bg-surface border border-border/50 shadow-sm flex items-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-sm group flex-1"
               >
-                <div className="flex items-center gap-3 flex-1 basis-0 min-w-0">
+                <div className="flex items-center gap-2 sm:gap-3 flex-1 basis-0 min-w-0">
                   <span className="text-emerald-500 font-bold">$</span>
                   <span className="text-foreground font-medium truncate">npm install get-response-lite -g</span>
                 </div>
                 <button 
                   onClick={handleCopy}
-                  className="p-2 hover:bg-foreground/5 rounded-lg transition-all text-muted-foreground hover:text-foreground shrink-0 ml-4 group/btn"
+                  className="p-2 hover:bg-foreground/5 rounded-lg transition-all text-muted-foreground hover:text-foreground shrink-0 ml-2 sm:ml-4 group/btn"
                   title="Copy to clipboard"
                 >
                   {copied ? <Check size={16} className="text-emerald-500 animate-in zoom-in-50" /> : <Copy size={16} className="group-hover/btn:scale-110 transition-transform" />}
@@ -101,7 +101,7 @@ export default function Comparison() {
                 href="https://www.npmjs.com/package/get-response-lite"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 flex items-center justify-center bg-surface border border-border/50 rounded-2xl transition-all text-muted-foreground hover:text-foreground shrink-0 group/link shadow-sm hover:shadow-md hover:bg-foreground/[0.02]"
+                className="w-12 sm:w-16 flex items-center justify-center bg-surface border border-border/50 rounded-2xl transition-all text-muted-foreground hover:text-foreground shrink-0 group/link shadow-sm hover:shadow-md hover:bg-foreground/[0.02]"
                 title="visit the npm page"
               >
                 <ArrowUpRight size={22} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />

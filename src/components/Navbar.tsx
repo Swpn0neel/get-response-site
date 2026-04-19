@@ -15,6 +15,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./Logo";
+import { Menu } from "lucide-react";
+import { navItems } from "@/components/DocsSidebar";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -58,6 +67,35 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+          {isDocsPage && (
+            <Sheet>
+              <SheetTrigger render={<Button variant="ghost" size="icon" className="lg:hidden mr-1" />}>
+                <Menu className="h-5 w-5" />
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[280px] sm:w-[320px] bg-surface pt-12 border-r">
+                <SheetHeader className="mb-4">
+                  <SheetTitle className="text-left font-technical font-bold text-sm uppercase tracking-widest text-muted-foreground">
+                    Table of Content
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="space-y-1">
+                  {navItems.map((item) => (
+                    <SheetTrigger 
+                      key={item.id} 
+                      render={
+                        <a href={`#${item.id}`} className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group hover:bg-primary/5 hover:text-primary text-muted-foreground text-sm font-medium" />
+                      }
+                    >
+                      <span className="shrink-0 transition-colors group-hover:text-primary">
+                        {item.icon}
+                      </span>
+                      <span className="truncate">{item.label}</span>
+                    </SheetTrigger>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          )}
           <ThemeToggle />
           <Button 
             render={<Link href="https://www.npmjs.com/package/get-response" target="_blank" rel="noopener noreferrer" />}

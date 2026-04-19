@@ -18,7 +18,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-const navItems = [
+export const navItems = [
   { id: "intro", label: "Introduction", icon: <Info size={18} /> },
   { id: "features", label: "Key Features", icon: <Zap size={18} /> },
   { id: "architecture", label: "Architecture", icon: <Layers size={18} /> },

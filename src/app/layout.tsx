@@ -15,8 +15,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "GetResponse CLI | A Terminal-Based AI Powerhouse",
-  description: "Experience technical rigor and editorial sophistication with the monochrome AI powerhouse for developers.",
+  title: "Get Response",
+  description: "Experience technical rigor and editorial sophistication with the terminal-based monochrome AI powerhouse for developers.",
   icons: {
     icon: "/logo.svg",
   },
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} font-sans min-h-full flex flex-col antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} font-sans min-h-full flex flex-col antialiased overflow-x-hidden`}
         suppressHydrationWarning
       >
         <ThemeProvider

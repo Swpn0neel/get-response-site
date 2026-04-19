@@ -118,19 +118,19 @@ function CodeBlock({ code, label }: { code: string; label?: string }) {
 
 export default function DocsContent() {
   return (
-    <div className="max-w-4xl mx-auto py-16 px-8 space-y-24 scroll-smooth">
+    <div className="max-w-4xl mx-auto py-8 md:py-16 px-4 sm:px-6 md:px-8 space-y-16 md:space-y-24 scroll-smooth">
       {/* Intro */}
       <section id="intro" className="space-y-8 min-h-[40vh] flex flex-col justify-center">
         <div className="space-y-4">
           <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-3 py-1">
             Documentation
           </Badge>
-          <h1 className="text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
             Get Response <br />
             <span className="text-muted-foreground">Terminal-Based AI Powerhouse</span>
           </h1>
         </div>
-        <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
           A modern, modular CLI tool that brings the full potential of Google’s Gemini AI 
           directly to your terminal—designed for developers who want productive, 
           context-aware conversations and automations.
@@ -221,7 +221,7 @@ export default function DocsContent() {
 
         <div className="space-y-16">
           <div className="space-y-6">
-            <h4 className="text-xl font-bold flex items-center gap-2">
+            <h4 className="text-lg md:text-xl font-bold flex items-center gap-2">
               <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">01</span>
               Contextual Intelligence
             </h4>
@@ -283,7 +283,7 @@ export default function DocsContent() {
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-xl font-bold flex items-center gap-2">
+            <h4 className="text-lg md:text-xl font-bold flex items-center gap-2">
               <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">02</span>
               Interactive Modes
             </h4>
@@ -294,7 +294,7 @@ export default function DocsContent() {
                   <span className="text-xs font-bold uppercase tracking-widest text-primary">Chat Mode</span>
                 </div>
                 <p className="text-sm text-muted-foreground">Maintains persistent session context for back-and-forth reasoning.</p>
-                <code className="block p-3 rounded-lg bg-background text-xs text-primary font-technical border border-border">
+                <code className="block p-3 rounded-lg bg-background text-xs text-primary font-technical border border-border whitespace-pre-wrap break-words">
                   $ npx get-response -c
                 </code>
               </div>
@@ -304,7 +304,7 @@ export default function DocsContent() {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#F48024]">Stack Exchange</span>
                 </div>
                 <p className="text-sm text-muted-foreground">In-terminal search and summarize for Stack Overflow.</p>
-                <code className="block p-3 rounded-lg bg-background text-xs text-[#F48024] font-technical border border-border">
+                <code className="block p-3 rounded-lg bg-background text-xs text-[#F48024] font-technical border border-border whitespace-pre-wrap break-words">
                   $ npx get-response -s "What is EOFError?"
                 </code>
               </div>
@@ -312,7 +312,7 @@ export default function DocsContent() {
           </div>
           
           <div className="space-y-6" id="automation">
-            <h4 className="text-xl font-bold flex items-center gap-2">
+            <h4 className="text-lg md:text-xl font-bold flex items-center gap-2">
               <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">03</span>
               Terminal Automation
             </h4>
@@ -328,7 +328,7 @@ export default function DocsContent() {
               </p>
               <div className="space-y-3">
                 <div className="text-[10px] uppercase font-bold text-muted-foreground opacity-50 tracking-wider">Example Command</div>
-                <code className="block p-4 rounded-2xl bg-background text-muted-foreground text-xs font-technical border border-border">
+                <code className="block p-4 rounded-2xl bg-background text-muted-foreground text-xs font-technical border border-border whitespace-pre-wrap break-words">
                   # "Find all large log files and move them to a backup folder" <br />
                   $ npx get-response -t "move all files larger than 10MB in /logs to /backup" 
                 </code>
@@ -337,7 +337,7 @@ export default function DocsContent() {
           </div>
 
           <div className="space-y-6" id="diagrams">
-            <h4 className="text-xl font-bold flex items-center gap-2">
+            <h4 className="text-lg md:text-xl font-bold flex items-center gap-2">
               <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">04</span>
               Diagram Generation
             </h4>
@@ -350,7 +350,7 @@ export default function DocsContent() {
                 Perfect for architecture reviews, get-response can output valid Mermaid.js code to 
                 visualize systems, logic flows, or database schemas directly in your terminal.
               </p>
-              <code className="block p-4 rounded-2xl bg-background text-xs text-primary font-technical border border-border">
+              <code className="block p-4 rounded-2xl bg-background text-xs text-primary font-technical border border-border whitespace-pre-wrap break-words">
                 $ npx get-response -m -d ./src
               </code>
             </div>

@@ -18,7 +18,7 @@ export default async function DocsPage() {
         </div>
 
         {/* Scrollable Content */}
-        <div className="flex-1 scroll-smooth">
+        <div className="flex-1 min-w-0 scroll-smooth">
           <DocsPageClient />
         </div>
       </main>
